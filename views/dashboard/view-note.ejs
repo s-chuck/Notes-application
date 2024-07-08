@@ -1,0 +1,62 @@
+<div class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 container-fluid-custom pb-5 mb-5">
+
+  <div class="flex flex-wrap mb-4">
+    <div class="relative flex-grow max-w-full flex-1 px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="flex flex-wrap list-reset pt-3 pb-3 py-4 px-4 mb-4 bg-gray-200 rounded">
+          <li class="inline-block px-2 py-2 text-blue-500"><a href="/dashboard">Dashboard</a></li>
+          <li class="text-gray-500 py-2">/</li>
+          <li class="inline-block px-2 py-2 text-gray-700 active"><%= note.title %></li>
+        </ol>
+      </nav>
+      <div class="relative flex-grow max-w-full flex-1 px-4 flex justify-between items-center">
+        <h1 class="h3">View Note</h1>
+        <button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-red-600 text-white hover:bg-red-700 me-2" data-bs-toggle="modal" id="deleteButton" data-bs-target="#deleteModal">
+          Delete
+        </button>
+        
+      </div>
+    </div>
+  </div>
+
+  <form action="/dashboard/item/<%= noteID %>?_method=PUT" method="POST">
+    <div class="mb-4">
+      <input type="text" class="block appearance-none w-full py-2 px-3 mb-3 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded fw-bold" id="title" name="title" value="<%= note.title %>" placeholder="Title">
+    </div>
+
+    <div class="mb-4">
+      <textarea class="block appearance-none w-full py-2 px-3 mb-3 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded pt-2" id="body" name="body" placeholder="Take a note..." rows="12"><%= note.body %></textarea>
+    </div>
+
+    <div class="mb-4">
+      <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded no-underline bg-blue-600 text-white hover:bg-blue-700 py-3 px-4 leading-tight text-xl">Update</button>
+    </div>
+  </form>
+
+</div>
+
+<!-- <div x-data="{ open: true }">
+  
+  <div x-show="open" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+      <div class="px-4 py-5 sm:px-6 flex justify-between items-center">
+        <h5 class="text-lg leading-6 font-medium text-gray-900">You are about to delete a note</h5>
+        <button type="button" class="text-gray-400 hover:text-gray-500" @click="open = false" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="px-4 py-5 sm:p-6">
+        <p class="text-sm text-gray-500">
+          This will delete your note <b class="font-bold"><%= note.title %></b><br/>
+          Are you sure?
+        </p>
+      </div>
+      <div class="px-4 py-4 sm:px-6 flex justify-end space-x-4">
+        <button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-nowrap rounded py-1 px-3 leading-normal no-underline bg-gray-600 text-white hover:bg-gray-700" @click="open = false">Close</button>
+        <form action="/dashboard/item-delete/<%= noteID %>?_method=DELETE" method="POST">
+          <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-nowrap rounded py-1 px-3 leading-normal no-underline bg-red-600 text-white hover:bg-red-700">Delete Note</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,17 @@
+<div style="color:#FFC700" class="border border-gray-700 mb-4">
+    <header class="mx-auto flex flex-wrap items-center justify-between py-3 px-4 md:px-0">
+        <a href="/dashboard" class="flex items-center mb-2 md:mb-0 font-bold text-2xl" style="color:#12296C">
+            Notes
+        </a>
+
+        <form class="flex flex-1 md:ml-10" role="search" method="POST" action="/dashboard/search">
+            <input type="search" name="searchTerm" class="form-input border border-blue-500 rounded px-4 py-2 w-full md:w-auto"
+                placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="flex items-center md:ml-auto">
+            <a href="/logout"
+                class="text-black border border-blue-500 bg-gray-200 px-4 py-2 rounded-full hover:bg-blue-500 hover:text-white">Logout</a>
+        </div>
+    </header>
+</div>

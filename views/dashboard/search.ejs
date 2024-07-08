@@ -1,0 +1,19 @@
+<div class="container mx-auto pb-20 mb-20">
+
+    <div class="row">
+      <% if (searchResults != '') { %>
+        <% searchResults.forEach(function (note, index) { %>
+          
+          <a href="/dashboard/item/<%= note._id %>" class="block mb-4">
+            <h4 class="text-xl font-semibold text-blue-500 hover:underline"><%= note.title %></h4>
+          </a>
+  
+        <% }) %>
+      <% } else { %>
+        <p class="text-gray-500">No items found.</p>
+      <% } %>
+  
+    </div>
+  
+  </div>
+  
