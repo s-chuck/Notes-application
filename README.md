@@ -96,3 +96,13 @@ This is a simple notes application that allows users to create, view, update, an
 ├── app.js
 ├── package-lock.json
 └── package.json
+
+## Usage
+
+- **Sign In:** Click on the "Sign in with Google" button to sign in using your Google account.
+- **Dashboard:** View a list of your notes on the dashboard.
+- **Add Note:** Click on the "+ New Note" button to add a new note.
+- **View Note:** Click on a note to view its details.
+- **Edit Note:** Click on the "Edit" button to update a note.
+- **Delete Note:** Click on the "Delete" button to delete a note.
+- **Search:** Use the search bar to search for notes.
